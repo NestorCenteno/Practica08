@@ -69,10 +69,13 @@ function leer(){
 $(function(){
     $('#archivos .individual li').tap(function(){
         if($(this).index()==0){//escribir
-            escribir($("#arcEscribir").val());
+            escribir($("#arcEscribir").val())
         }
         else{//leer
-            leer();
+            //var erc=$("#arcEscribir").val()
+            //alert(erc);
+            //$("#arcLeer").val(erc);
+            leer()
         }
     });
 });

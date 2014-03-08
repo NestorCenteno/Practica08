@@ -62,7 +62,7 @@ function leer(){
     }
 
     function fail(evt) {
-        console.log(evt.target.error.code);
+        alert(evt.target.error.code);
     }
 }
 

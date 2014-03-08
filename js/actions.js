@@ -28,7 +28,7 @@ function escribir(texto){
                 navigator.notification.alert("el archivo fue escrito satisfactoriamente.",null,"escribir","aceptar");
             };
         };
-        writer.write(text);
+        writer.write(texto);
     }
 
     function fail(error) {

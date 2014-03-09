@@ -52,8 +52,8 @@ function crear(nom,tel,mail){
 $(function(){
     $('#acSend').tap(function(){
         var nom = $('#nc .rounded input').eq(0).val();
-        var tel = $('#nc .rounded input').eq(2).val();
-        var mail = $('#nc .rounded input').eq(1).val();
+        var tel = $('#nc .rounded input').eq(1).val();
+        var mail = $('#nc .rounded input').eq(2).val();
         
         crear(nom,tel,mail);
     });

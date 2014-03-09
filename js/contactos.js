@@ -1,7 +1,8 @@
 function listar(){
     function onSuccess(contacts) {
+        $('#contactos .plastic').html('');
         for(i=0;i<=contacts.length;i++){
-            $('#contactos .plastic').html('<li><a href="tel:'+contacts[i].phoneNumbers[0]+'">'+contacts[i].name.formatted+'</a></li>');
+            $('#contactos .plastic').append('<li><a href="tel:'+contacts[i].phoneNumbers[0]+'">'+contacts[i].name.formatted+'</a></li>');
         }
     }
 
@@ -47,7 +48,7 @@ function crear(nom,tel,mail){
         alert('correos');
         
         myContact.save(function(){
-            navigator.notification.alert("el contacto ha sido creado","null","contacto","aceptar");
+            navigator.notification.alert("el contacto ha sido creado",null,"contacto","aceptar");
         },function(){
             alert("no se pudo guardar el contacto");
         });

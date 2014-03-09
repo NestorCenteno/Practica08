@@ -55,10 +55,10 @@ $(function(){
         var nom=$('#nc .rounded input').eq(0).val();
         var mail=$('#nc .rounded input').eq(1).val();
         var tel=$('#nc .rounded input').eq(2).val();
-        alert(nom+tel+mail);
+        crear(nom,tel,mail);
     });
     
     $("#contactos .individual li").eq(0).tap(function(){
-        alert();
+        listar();
     });
 });

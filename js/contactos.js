@@ -18,6 +18,7 @@ navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
 function crear(nom,tel,mail){
+    alert('dentro de crear');
     document.addEventListener("deviceready", onDeviceReady, false);
 
     // device APIs are available
@@ -26,20 +27,24 @@ function crear(nom,tel,mail){
         var myContact = navigator.contacts.create();
         myContact.displayName=nom;
         myContact.nickname=nom;
+        alert('var mycontact');
         
         var contacto=new ContacName();
         contacto.givenName=nom;
         contacto.familyName="Prueba";
         myContact.name=contacto;
+        alert('var contacto');
         
         var telefonos=[];
         telefonos[0]=new ContactField("home",tel,true);
         telefonos[1]=new ContactField("mobile","1223323223",false);
         myContact.phoneNumbers=telefonos;
+        alert('var telefonos');
         
         var correos=[];
         correos[0]=new ContactField("home",mail,true);
         myContact.emails=correos;
+        alert('correos');
         
         myContact.save(function(){
             navigator.notification.alert("el contacto ha sido creado","null","contacto","aceptar");
@@ -60,5 +65,6 @@ $(function(){
     
     $("#contactos .individual li").eq(0).tap(function(){
         listar();
+        alert('lista creada');
     });
 });
